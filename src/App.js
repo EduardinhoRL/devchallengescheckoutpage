@@ -8,14 +8,19 @@ import styled from 'styled-components'
 const  Container = styled.div`
   width: 100%;
   max-width: 961px;
-  margin: 64px auto 17px auto;
+  margin: var(--margin_page);
+  padding: 12px;
 `
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  gap: 113px;
-  margin-top: 50px;
+  gap: 5vw;
+  margin-top: var(--margin_top_content);
+
+  @media screen and (max-width: 867px) {
+    grid-template-columns:1fr; 
+  }
 `
 
 function App() {

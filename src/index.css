@@ -44,6 +44,23 @@
 
   --padding_input: 18px;
   --padding_input2: 52px;
+  --padding_btn_quantity: 13px;
+
+  --padding_wrapper_items: 33px 29px 10px 29px;
+
+  --font_label: 12px;
+  --font_input: 16px;
+  --font_input_icon: 24px;
+  --font_shipping_total: 18px;
+  --font_price_discount: 16px;
+  --font_price: 12px;
+  --font_name_product: 16px;
+  --font_titles_form: 18px;
+  --font_title_page: 44px;
+
+  --margin_top_content: 50px;
+  --margin_page: 64px auto 17px auto;
+  --margin_center867: unset; 
 }
 
 * {
@@ -54,4 +71,32 @@
 
 body, input, select, button { 
   font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 867px) {
+  :root {
+    --padding_input: 12px;
+    --padding_input2: 39px;
+    --padding_btn_quantity: 10px;
+
+    --font_label: 10px;
+    --font_input: 14px;
+    --font_input_icon: 19px;
+    --font_shipping_total: 14px;
+    --font_price_discount: 14px;
+    --font_price: 10px;
+    --font_name_product: 12px;
+    --font_titles_form: 14px;
+    --font_title_page: 29px;
+
+    --margin_page: 32px auto 17px auto;
+    --margin_top_content: 20px;
+    --margin_center867: 0 auto;
+    
+  } 
+} 
+@media screen and (max-width: 420px) {
+  :root {
+    --padding_wrapper_items: 27px 22px 10px 22px;
+  }
 }

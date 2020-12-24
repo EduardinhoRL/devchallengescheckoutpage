@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import styled from 'styled-components'
+
 
 
 const Wrapperdetails = styled.div`
@@ -15,6 +16,7 @@ const Wrapperdetails = styled.div`
     .name_product {
       color: var(--gray_title);
       font-weight: bold;
+      font-size: var(--font_name_product)
     }
 
     .prices {  
@@ -25,19 +27,21 @@ const Wrapperdetails = styled.div`
       span:nth-child(1) {
         color: var(--orange);
         margin-right: 10px;
+        font-size: var(--font_price_discount);
       }
 
       span:nth-child(2) {
         color: var(--gray_title);
         text-decoration: line-through;
         font-size: 12px;
+        font-size: var(--font_price);
       }
     }
   }
 `
 
 const Quantity = styled.div`
-  padding: 13px;
+  padding: var(--padding_btn_quantity);
   border: 1px solid var(--gray);
   border-radius: 12px;
   display: flex;
@@ -78,11 +82,13 @@ const Item = ({ item, total, setTotal }) => {
   const handleClick = e => {
     if(e.target.name === 'more') { 
       setQuantity(quantity + 1)  
+      setTotal(total + price1)
         } else {
           if(quantity === 1){
             return
           } else {
             setQuantity(quantity-1) 
+            setTotal(total - price1)
           } 
         } 
   }

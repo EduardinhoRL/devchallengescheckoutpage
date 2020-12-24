@@ -6,6 +6,7 @@ const Form = styled.form`
   display: grid;
   gap: 58px;
   grid-template-rows: auto 1fr;
+  margin: var(--margin_center867);
 `
 
 const Groupform = styled.div`
@@ -15,12 +16,14 @@ const Groupform = styled.div`
 
   h2 {
     color: var(--gray_title);
-    font-size: 18px;
+    font-size: var(--font_titles_form);
+    
   }
 
   .label_input {
     display: grid;
     gap: 7px;
+    font-size: var(--font_label);
   }
 `
 
@@ -47,6 +50,7 @@ const Wrapperinput = styled.div`
 
     span {
       color: var(--gray);
+      font-size: var(--font_input_icon)
     }
   }
   
@@ -75,6 +79,7 @@ const Wrapperinput = styled.div`
     border-radius: 12px;
     font-weight: bold; 
     width: 100%; 
+    font-size: var(--font_input);
     outline: none;
     padding: var(--padding_input) var(--padding_input) var(--padding_input) var(--padding_input2);
     color: var(--gray2);
